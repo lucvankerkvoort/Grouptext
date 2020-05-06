@@ -1,7 +1,6 @@
 import React from "react";
 
-function Jumbotron() {
-  const { title } = this.props;
+function Jumbotron(title) {
   return (
     <div className="jumbotron">
       <h2>{title}</h2>

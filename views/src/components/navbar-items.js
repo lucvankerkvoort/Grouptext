@@ -1,4 +1,4 @@
-let navbarItems = [
+export const navbarItems = [
   { name: "Home", link: "/" },
   {
     name: "Create Group",
@@ -19,5 +19,3 @@ let navbarItems = [
     name: "Register",
   },
 ];
-
-export default navbarItems;

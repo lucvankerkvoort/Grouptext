@@ -1,4 +1,6 @@
 import React from "react";
+import Modal from "../components/modal";
+import Group from "../components/group";
 
 class CreateGroup extends React.Component {
   state = {

@@ -4,7 +4,7 @@ class Homepage extends React.Component {
   render() {
     return (
       <div className="homepage">
-        <Jumbotron title="Ask a Question to a Group of Friends" />
+        {Jumbotron("Ask a Question to a Group of Friends")}
       </div>
     );
   }

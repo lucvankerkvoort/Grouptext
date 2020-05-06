@@ -1,11 +1,11 @@
 import React from "react";
 import Navbar from "./components/navbar";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Homepage from "./pages/homepage";
+import Homepage from "./pages/HomePage";
 import Modal from "./components/modal";
-import Help from "./pages/help";
-import About from "./pages/about";
-import CreateGroup from "./pages/createGroup";
+import Help from "./pages/Help";
+import About from "./pages/About";
+import CreateGroup from "./pages/CreateGroup";
 import "./App.css";
 
 class App extends React.Component {
