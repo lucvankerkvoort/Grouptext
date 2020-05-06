@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navbar from "./components/navbar";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Homepage from "./pages/homepage";
+import Modal from "./components/modal";
+import Help from "./pages/help";
+import About from "./pages/about";
+import CreateGroup from "./pages/createGroup";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    showElement: false,
+  };
+
+  toggleElement = (boolean) => {
+    this.setState({ showElement: boolean });
+  };
+
+  handleInfo = (input) => {
+    this.setState({ input });
+    console.log("something");
+  };
+
+  render() {
+    const { showElement } = this.state;
+    return (
+      <div className="App">
+        <Router>
+          {showElement ? (
+            <Modal close={this.toggleElement} info={this.handleInfo} />
+          ) : null}
+          <Navbar showElement={this.toggleElement} />
+          <Route path="/creategroup" render={() => <CreateGroup />} />
+          <Route path="/help" component={Help} />
+          <Route path="/about" component={About} />
+          <Route exact path="/" component={Homepage} />
+        </Router>
+      </div>
+    );
+  }
 }
 
 export default App;
