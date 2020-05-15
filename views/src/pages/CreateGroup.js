@@ -22,6 +22,14 @@ class CreateGroup extends React.Component {
     this.setState({ showElement: input });
   };
 
+  removeGroup = (input) => {
+    console.log(input);
+    const { groups } = this.state;
+    let array = [...groups];
+    array.splice(input, 1);
+    this.setState({ groups: array });
+  };
+
   render() {
     const { showElement, groups } = this.state;
     return (
@@ -38,11 +46,16 @@ class CreateGroup extends React.Component {
         >
           Add a Group +
         </div>
-        <div id="addedGroups">
-          {(groups || []).map((element, i) => {
-            return <Group key={i} groupName={element.groupName} />;
-          })}
-        </div>
+        {(groups || []).map((element, i) => {
+          return (
+            <Group
+              key={i}
+              id={i}
+              element={element}
+              removeGroup={this.removeGroup}
+            />
+          );
+        })}
       </div>
     );
   }

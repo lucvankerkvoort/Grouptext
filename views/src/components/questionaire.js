@@ -4,7 +4,6 @@ import { login, register, group, member, question } from "./questions";
 class Questionaire extends React.Component {
   state = {};
   handleChange = (e) => {
-    console.log(e.target.value);
     this.setState({ [e.target.name]: e.target.value });
   };
   handleClick = (e) => {
