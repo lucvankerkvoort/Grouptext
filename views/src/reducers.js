@@ -1,14 +1,15 @@
-import { CHANGE_SEARCH_FIELD } from "./constants";
+import { UPDATE_GROUPS } from "./constants";
 
 const initialState = {
-    searchField: "" 
-}
+  groups: [],
+};
 
-export const searchRobots = (state=initialState, action={}) =>{
-    switch(action.type) {
-        case: CHANGE_SEARCH_FIELD:
-        return Object.assign({},state, searchField: action.payload);
-        default:
-            return state
-    }
-}
+export const groupManagement = (state = initialState, action = {}) => {
+  console.log(action.type);
+  switch (action.type) {
+    case UPDATE_GROUPS:
+      return Object.assign({}, state, { groups: action.payload });
+    default:
+      return state;
+  }
+};
