@@ -1,7 +1,6 @@
 import React from "react";
 
 const Members = (props) => {
-  console.log(props);
   const { members } = props;
   return (
     <>

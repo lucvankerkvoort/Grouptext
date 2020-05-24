@@ -102,17 +102,17 @@
 }
 /*------------------------- Create a Group--------------------- */
 .CreateGroup {
-  display: flex;
   flex-direction: column;
   height: 90vh;
   background: white;
-  margin: 0px;
+  padding-top: 50px;
 }
 
 .addGroup {
-  position: relative;
+  position: absolute;
   margin-left: 20px;
   cursor: pointer;
+  top: 60px;
   padding: 10px;
   width: 120px;
   box-shadow: 2px 2px 3px black;

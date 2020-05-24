@@ -5,6 +5,9 @@ export const setGroups = (array) => ({
   payload: array,
 });
 
+export const getGroups = () => (dispatch) =>{
+
+}
 // export const setMembers = (array) =>({
 //   type:
 // })

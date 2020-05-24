@@ -1,9 +1,9 @@
 import React from "react";
 
-function Jumbotron(title) {
+function Jumbotron({ text }) {
   return (
     <div className="jumbotron">
-      <h2>{title}</h2>
+      <h2>{text}</h2>
     </div>
   );
 }
