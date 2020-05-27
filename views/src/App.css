@@ -1,4 +1,7 @@
 /*------------------------- Navbar--------------------- */
+h1 {
+  font-size: 2vw;
+}
 .navbar {
   display: flex;
   height: 10vh;

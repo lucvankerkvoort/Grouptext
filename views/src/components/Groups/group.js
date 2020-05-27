@@ -1,5 +1,5 @@
 import React from "react";
-import Modal from "./modal";
+import Modal from "../Modal/modal";
 import Members from "./members";
 import Questions from "./question";
 
@@ -43,7 +43,7 @@ class Group extends React.Component {
     return (
       <div className="groupElement">
         {showModal ? <Modal info={this.handleInfo} close={this.close} /> : null}
-        <h1>{element.groupName}</h1>
+        <h1>{element.group_name}</h1>
         <Members members={members} remove={this.removeMember} />
         <Questions questions={question} />
         <div className="buttons-group">

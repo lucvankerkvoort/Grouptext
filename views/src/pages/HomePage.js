@@ -1,5 +1,6 @@
 import React from "react";
-import Jumbotron from "../components/jumbotron";
+import Jumbotron from "../components/Jumbotron/jumbotron";
+
 class Homepage extends React.Component {
   render() {
     return (

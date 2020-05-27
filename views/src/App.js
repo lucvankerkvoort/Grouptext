@@ -1,27 +1,13 @@
 import React, { useState } from "react";
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar/navbar";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { connect } from "react-redux";
 import Homepage from "./pages/HomePage";
-import Modal from "./components/modal";
+import Modal from "./components/Modal/modal";
 import Help from "./pages/Help";
 import About from "./pages/About";
 import CreateGroup from "./pages/CreateGroup";
 import "./App.css";
-
-import { setGroups } from "./services/actions";
-
-const mapStateToProps = (state) => {
-  return {
-    groups: state.groups,
-  };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    handleInfo: (input) => dispatch(setGroups(input)),
-  };
-};
 
 const App = (props) => {
   const [showElement, setShowElement] = useState(false);
@@ -43,4 +29,4 @@ const App = (props) => {
   );
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;
