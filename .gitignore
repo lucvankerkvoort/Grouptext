@@ -1,3 +1,6 @@
+# VI
+*.sw?
+
 # Logs
 logs
 *.log
