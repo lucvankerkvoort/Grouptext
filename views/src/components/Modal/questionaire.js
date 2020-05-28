@@ -1,13 +1,13 @@
-import React from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { store } from "../../services/Store";
 import { login, register, group, member, question } from "./questions";
 
-class Questionaire extends React.Component {
-  state = {};
-  handleChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
-  handleClick = (e) => {
-    const { info, close } = this.props;
+const Questionaire = ({ close }) => {
+  const [info, setInfo] = useState();
+  const userData = useContext(store);
+  const { dispatch } = userData;
+
+  const handleClick = (e) => {
     e.preventDefault();
     if (Object.keys(this.state).length === 0) {
       let form = document.getElementsByTagName("form");
@@ -17,12 +17,11 @@ class Questionaire extends React.Component {
         form[0].append(message);
       }
     } else {
-      info(this.state);
       close();
     }
   };
-  questions = () => {
-    const element = localStorage.getItem("element");
+  const questions = () => {
+    const element = userData.state.element;
     switch (element) {
       case "Login":
         return login;
@@ -35,30 +34,32 @@ class Questionaire extends React.Component {
       case "Question":
         return question;
       default:
-        return localStorage.setItem("element", "");
+        return dispatch({ type: "setElement", payload: "" });
     }
   };
-  render() {
-    return (
-      <div className="Questionaire">
-        <form>
-          <h2>{localStorage.getItem("element")}</h2>
-          {this.questions().map((element, i) => {
-            return (
-              <input
-                key={i}
-                name={element.name}
-                type={element.type}
-                placeholder={element.placeholder}
-                onChange={this.handleChange}
-              />
-            );
-          })}
-          <button onClick={this.handleClick}>Submit</button>
-        </form>
-      </div>
-    );
-  }
-}
+  console.log(info);
+  return (
+    <div className="Questionaire">
+      <form>
+        <h2>{userData.state.element}</h2>
+        {questions().map((element, i) => {
+          return (
+            <input
+              key={i}
+              name={element.name}
+              type={element.type}
+              placeholder={element.placeholder}
+              onChange={(e) => {
+                const info = e.target.name;
+                info({ [e.target.name]: e.target.value });
+              }}
+            />
+          );
+        })}
+        <button onClick={() => handleClick}>Submit</button>
+      </form>
+    </div>
+  );
+};
 
 export default Questionaire;

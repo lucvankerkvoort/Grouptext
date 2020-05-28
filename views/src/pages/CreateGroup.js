@@ -11,8 +11,8 @@ const CreateGroup = (props) => {
   const { dispatch } = userData;
 
   useEffect(function () {
-    API.getGroups().then((res) =>
-      dispatch({ type: "setGroups", payload: res })
+    API.getGroups().then((data) =>
+      dispatch({ type: "setGroups", payload: data })
     );
   }, []);
 
