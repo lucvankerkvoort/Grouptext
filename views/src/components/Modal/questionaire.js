@@ -27,7 +27,7 @@ const Questionaire = ({ close, info, element }) => {
         return <Login close={close} />;
       case "Register":
         return <Register close={close} />;
-      case "Group":
+      case "Groups":
         return <AddGroup close={close} />;
       case "Member":
         return <AddMembers close={close} />;

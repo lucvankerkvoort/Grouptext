@@ -4,7 +4,7 @@ export default {
     fetch(url)
       .then((res) => res.json())
       .then((json) => json),
-  setMembers: (data) =>
+  setGroups: (data) =>
     fetch(url, {
       method: "POST",
       mode: "cors",

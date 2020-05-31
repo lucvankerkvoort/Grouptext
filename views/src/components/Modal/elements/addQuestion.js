@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useContext } from "react";
-import { store } from "../../services/Store";
+import { store } from "../../../services/Store";
 
-export const AddQuestion = () => {
+export const AddQuestion = ({ close }) => {
   const userData = useContext(store);
   const { dispatch } = userData;
 
@@ -14,6 +14,7 @@ export const AddQuestion = () => {
       ...question,
     };
     dispatch({ type: "question", payload: info });
+    close();
   };
   return (
     <>

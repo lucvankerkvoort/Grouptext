@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useContext } from "react";
-import { store } from "../../services/Store";
+import { store } from "../../../services/Store";
 
-export const Register = () => {
+export const Register = ({ close }) => {
   const userData = useContext(store);
   const { dispatch } = userData;
 
@@ -18,6 +18,7 @@ export const Register = () => {
       ...passwordConfirm,
     };
     dispatch({ type: "registration", payload: info });
+    close();
   };
   return (
     <>

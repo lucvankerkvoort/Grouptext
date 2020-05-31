@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useContext } from "react";
-import { store } from "../../services/Store";
+import { store } from "../../../services/Store";
+import API from "../../../services/controller";
 
-export const AddMembers = () => {
+export const AddMembers = ({ close }) => {
   const userData = useContext(store);
   const { dispatch } = userData;
 
@@ -15,7 +16,12 @@ export const AddMembers = () => {
       ...member_name,
       ...member_tel,
     };
+    const currentGroup = userData.state.current;
+
+    // API.addMemberToGroup([currentGroup, info]);
+
     dispatch({ type: "member", payload: info });
+    close();
   };
   return (
     <>
