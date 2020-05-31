@@ -1,0 +1,16 @@
+.Help {
+  background: white;
+  display: flex;
+  height: 90vh;
+  margin: 0px;
+  justify-content: center;
+  align-items: center;
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 300px;
+    width: 800px;
+  }
+}

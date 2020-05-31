@@ -1,0 +1,43 @@
+.groupElement {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50vh;
+  margin: 10px;
+  width: 180px;
+  text-align: center;
+  box-shadow: 2px 2px 3px black;
+  button {
+    width: 50%;
+  }
+  input {
+    text-align: center;
+  }
+  .buttons-group {
+    position: absolute;
+    bottom: 5px;
+    display: flex;
+    width: 100%;
+    button {
+      width: 25%;
+      font-size: 0.7em;
+    }
+  }
+  .question {
+    position: absolute;
+    bottom: 50px;
+  }
+  .table-group {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 100%;
+    overflow-x: hidden;
+    top: 50px;
+  }
+  h1 {
+    font-size: 0.8em;
+  }
+}
