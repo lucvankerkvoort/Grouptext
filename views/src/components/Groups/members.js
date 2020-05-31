@@ -1,7 +1,6 @@
 import React from "react";
 
-const Members = (props) => {
-  const { members } = props;
+const Members = ({ members }) => {
   return (
     <>
       <table>
@@ -23,7 +22,7 @@ const Members = (props) => {
                 <td>{element.telephoneNumber}</td>
                 <td
                   style={{ cursor: "pointer" }}
-                  onClick={() => props.remove(i)}
+                  // onClick={() => props.remove(i)}
                 >
                   X
                 </td>

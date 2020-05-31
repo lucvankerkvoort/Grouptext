@@ -1,10 +1,11 @@
+const url = "https://grouptext-django.dreamstate-4-all.org/TextGroups/";
 export default {
   getGroups: () =>
-    fetch("https://grouptext-django.dreamstate-4-all.org/TextGroups/")
+    fetch(url)
       .then((res) => res.json())
       .then((json) => json),
   setMembers: (data) =>
-    fetch("https://grouptext-django.dreamstate-4-all.org/TextGroups/", {
+    fetch(url, {
       method: "POST",
       mode: "cors",
       cache: "no-cache",

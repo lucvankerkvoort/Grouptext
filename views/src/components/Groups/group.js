@@ -12,7 +12,11 @@ const Group = ({ element, removeGroup, id }) => {
 
   const setElement = (input) => {
     setShowElement(true);
-    dispatch({ type: "setElement", payload: input });
+    dispatch({
+      type: "setElement",
+      payload: input,
+    });
+    dispatch({ type: "setCurrent", payload: element.group_name });
   };
 
   console.log(userData);

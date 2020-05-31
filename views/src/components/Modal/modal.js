@@ -15,7 +15,6 @@ const Modal = ({ close }) => {
           close={() => close()}
           element={userData.state.element}
           info={(input) => {
-            console.log("i run");
             dispatch({ type: "setInfo", payload: input });
           }}
         />
