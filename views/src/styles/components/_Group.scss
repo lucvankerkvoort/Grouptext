@@ -5,9 +5,10 @@
   align-items: center;
   height: 50vh;
   margin: 10px;
-  width: 180px;
+  width: 250px;
   text-align: center;
-  box-shadow: 2px 2px 3px black;
+  box-shadow: 12px 12px 2px lightgray;
+  border-radius: 5px;
   button {
     width: 50%;
   }
@@ -16,12 +17,27 @@
   }
   .buttons-group {
     position: absolute;
-    bottom: 5px;
+    left: 0px;
     display: flex;
-    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    background: $aqua;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 30%;
     button {
-      width: 25%;
       font-size: 0.7em;
+      font-weight: 700;
+      font-family: "montserrat";
+      border: none;
+      text-align: center;
+      color: white;
+      background: none;
+      margin: 0px;
+      padding: 0px;
+      cursor: pointer;
     }
   }
   .question {
@@ -38,6 +54,17 @@
     top: 50px;
   }
   h1 {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
     font-size: 0.8em;
+    height: 30px;
+    width: 100%;
+    background: $aqua;
+    color: white;
+    align-items: center;
+    margin: 0px;
+    justify-content: center;
+    z-index: 2;
   }
 }

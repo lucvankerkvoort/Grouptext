@@ -1,10 +1,11 @@
 .CreateGroup {
   flex-direction: column;
   height: 90vh;
-  background: white;
   padding-top: 50px;
   .addGroup {
     position: absolute;
+    color: white;
+    background: $aqua;
     margin-left: 20px;
     cursor: pointer;
     top: 60px;

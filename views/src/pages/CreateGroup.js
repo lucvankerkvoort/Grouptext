@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, createRef } from "react";
 import API from "../services/controller";
 import { store } from "../services/Store";
 import Modal from "../components/Modal/modal";
@@ -6,14 +6,17 @@ import Group from "../components/Groups/group";
 
 const CreateGroup = (props) => {
   const [showElement, setShowElement] = useState(false);
+  const [groups, setGroups] = useState("");
 
+  const groupRef = createRef(false);
   const userData = useContext(store);
   const { dispatch } = userData;
 
   useEffect(function () {
-    API.getGroups().then((data) =>
-      dispatch({ type: "setGroups", payload: data })
-    );
+    API.getGroups()
+      .then((data) => dispatch({ type: "setGroups", payload: data }))
+      .then((data) => setGroups(data));
+    console.log(groups);
   }, []);
 
   const handleInfo = (input) => {

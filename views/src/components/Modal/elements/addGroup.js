@@ -15,8 +15,11 @@ export const AddGroup = ({ close }) => {
       ...group_name,
     };
 
+    let updatedGroups = [...userData.state.groups];
+    updatedGroups.push(info);
+
     // API.setGroups(info).then((res) => console.log(res));
-    dispatch({ type: "addGroup", payload: info });
+    dispatch({ type: "setGroups", payload: updatedGroups });
     close();
   };
   return (

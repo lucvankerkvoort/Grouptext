@@ -2,20 +2,28 @@
   display: flex;
   height: 10vh;
   width: 100%;
+  font-family: "Montserrat";
+  font-weight: 800;
+  color: $yellow;
+  background: white;
   .logo {
     display: flex;
     width: 20%;
     justify-content: center;
     align-items: center;
-    text-shadow: 1px 1px wheat;
+    text-shadow: 1px 1px 1px black;
+    p {
+      color: $yellow;
+    }
   }
   .navbar-items {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    text-shadow: 1px 1px wheat;
+    text-shadow: 1px 1px 1px black;
     width: 80%;
     p {
+      color: $yellow;
       padding: 0 15px;
       cursor: pointer;
     }
