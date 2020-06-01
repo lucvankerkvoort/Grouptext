@@ -9,9 +9,7 @@
   text-align: center;
   box-shadow: 12px 12px 2px lightgray;
   border-radius: 5px;
-  button {
-    width: 50%;
-  }
+
   input {
     text-align: center;
   }
@@ -20,10 +18,18 @@
     left: 0px;
     display: flex;
     justify-content: space-evenly;
+    background-image: linear-gradient(
+      to bottom,
+      #17e9e0,
+      #00e3e8,
+      #00dcef,
+      #00d5f4,
+      #00cef7
+    );
     align-items: center;
     height: 100%;
     flex-direction: column;
-    background: $aqua;
+    // background: $aqua;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     width: 30%;
@@ -60,7 +66,14 @@
     font-size: 0.8em;
     height: 30px;
     width: 100%;
-    background: $aqua;
+    background-image: linear-gradient(
+      to right,
+      #17e9e0,
+      #00e3e8,
+      #00dcef,
+      #00d5f4,
+      #00cef7
+    );
     color: white;
     align-items: center;
     margin: 0px;
