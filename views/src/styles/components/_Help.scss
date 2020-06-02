@@ -7,6 +7,7 @@
   align-items: center;
   .text {
     display: flex;
+    font-size: 0.7em;
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -18,6 +19,23 @@
       padding: 10px;
       border-radius: 10px;
       text-shadow: 2px 2px gray;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .Help,
+  .About {
+    .text {
+      font-size: 1em;
     }
   }
 }

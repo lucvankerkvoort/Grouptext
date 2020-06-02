@@ -1,5 +1,6 @@
 .navbar {
   display: flex;
+  justify-content: center;
   height: 10vh;
   width: 100%;
   font-family: "Montserrat";
@@ -7,12 +8,12 @@
   color: $yellow;
   background: white;
   .logo {
-    display: flex;
+    display: none;
     width: 20%;
     justify-content: center;
     align-items: center;
     p {
-      font-size: 1.2em;
+      font-size: 0.5em;
       color: $yellow;
     }
     p:hover {
@@ -32,8 +33,8 @@
     width: 80%;
     p {
       color: $yellow;
-      font-size: 1.2em;
-      padding: 0 15px;
+      font-size: 0.8em;
+      padding: 0 2px;
       cursor: pointer;
     }
     p:hover {
@@ -47,18 +48,37 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .logo {
-    display: none;
+@media only screen and (min-width: 600px) {
+  .navbar {
+    margin-left: 0px;
+
+    .navbar-items {
+      p {
+        padding: 0 15px;
+      }
+    }
+
+    .logo {
+      display: flex;
+      width: 20%;
+      justify-content: center;
+      align-items: center;
+      p {
+        font-size: 1.2em;
+        color: $yellow;
+      }
+    }
   }
   .navbar-items {
-    font-size: 0.7em;
+    font-size: 1.2em;
     width: 100%;
   }
-  .navbar-items p {
-    padding: 0 5px;
-  }
-  .text {
-    font-size: 0.7em;
-  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

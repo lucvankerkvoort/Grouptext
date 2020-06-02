@@ -23,7 +23,27 @@
   color: white;
   align-items: center;
   h2 {
-    font-size: 6em;
-    text-shadow: 5px 5px #a64ac9;
+    font-size: 4em;
+    text-shadow: 2px 2px #a64ac9;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .jumbotron {
+    h2 {
+      font-size: 6em;
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .jumbotron {
+    h2 {
+      font-size: 6em;
+    }
   }
 }
