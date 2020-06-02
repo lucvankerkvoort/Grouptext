@@ -1,9 +1,12 @@
 .CreateGroup {
-  flex-direction: column;
+  display: flex;
   height: 90vh;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   padding-top: 50px;
   .addGroup {
     position: absolute;
+    left: 5px;
     color: white;
     background: $highlight;
     margin-left: 20px;
