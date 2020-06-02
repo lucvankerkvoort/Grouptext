@@ -41,9 +41,14 @@
       text-align: center;
       color: white;
       background: none;
+      text-shadow: 1px 1px gray;
       margin: 0px;
       padding: 0px;
       cursor: pointer;
+    }
+    button:hover {
+      transform: scale(1.2);
+      transition: 0.2s;
     }
   }
   .question {
@@ -63,9 +68,10 @@
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     display: flex;
-    font-size: 0.8em;
+    font-size: 1em;
     height: 30px;
     width: 100%;
+    text-shadow: 1px 1px gray;
     background-image: linear-gradient(
       to right,
       #17e9e0,

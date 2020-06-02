@@ -1,11 +1,29 @@
 .jumbotron {
   display: flex;
-  height: 60vh;
+  height: 80vh;
   width: 100%;
-  background: gray;
-  background-size: contain;
+  background-image: linear-gradient(
+    to left bottom,
+    #fccd04,
+    #cedb35,
+    #a1e460,
+    #74e98b,
+    #45ebb4,
+    #20e9c8,
+    #00e7da,
+    #00e3e8,
+    #00deed,
+    #00d9f2,
+    #00d4f5,
+    #00cef7
+  );
+  background-size: cover;
   background-position: center;
-  justify-content: center;
+  justify-content: flex-start;
   color: white;
-  align-items: flex-end;
+  align-items: center;
+  h2 {
+    font-size: 6em;
+    text-shadow: 5px 5px #a64ac9;
+  }
 }

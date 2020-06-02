@@ -1,6 +1,6 @@
 import React from "react";
 
-function Text(title) {
+const Text = ({ title }) => {
   return (
     <div className="text">
       <h2>{title}</h2>
@@ -32,6 +32,6 @@ function Text(title) {
       </p>
     </div>
   );
-}
+};
 
 export default Text;

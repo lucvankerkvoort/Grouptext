@@ -5,18 +5,24 @@
   .addGroup {
     position: absolute;
     color: white;
-    background: $aqua;
+    background: $highlight;
     margin-left: 20px;
+    text-shadow: 1px 1px gray;
     cursor: pointer;
     top: 60px;
     padding: 10px;
     width: 120px;
-    box-shadow: 2px 2px 3px black;
+    box-shadow: 2px 2px 3px gray;
     border-radius: 5px;
     margin-bottom: 20px;
   }
+  .addGroup:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+  }
   .addGroup:active {
-    box-shadow: none;
+    transform: scale(0.9);
+    transition: 0.2s;
   }
   .addedGroups {
     display: flex;

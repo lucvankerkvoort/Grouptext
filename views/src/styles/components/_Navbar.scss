@@ -11,21 +11,38 @@
     width: 20%;
     justify-content: center;
     align-items: center;
-    text-shadow: 1px 1px 1px black;
     p {
+      font-size: 1.2em;
       color: $yellow;
+    }
+    p:hover {
+      transform: scale(1.1);
+      transition: 0.2s;
+    }
+    p:active {
+      transform: scale(0.9);
+      transition: 0.2s;
     }
   }
   .navbar-items {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    text-shadow: 1px 1px 1px black;
+    // text-shadow: 1px 1px 1px black;
     width: 80%;
     p {
       color: $yellow;
+      font-size: 1.2em;
       padding: 0 15px;
       cursor: pointer;
+    }
+    p:hover {
+      transform: scale(1.1);
+      transition: 0.2s;
+    }
+    p:active {
+      transform: scale(0.9);
+      transition: 0.2s;
     }
   }
 }

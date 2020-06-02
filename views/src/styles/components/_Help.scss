@@ -12,5 +12,12 @@
     text-align: center;
     height: 300px;
     width: 800px;
+    h2 {
+      color: white;
+      background: $highlight;
+      padding: 10px;
+      border-radius: 10px;
+      text-shadow: 2px 2px gray;
+    }
   }
 }
