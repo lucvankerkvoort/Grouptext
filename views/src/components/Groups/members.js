@@ -4,7 +4,7 @@ const Members = ({ members }) => {
   return (
     <>
       <table>
-        {members.length < 1 ? null : (
+        {(members || []).length < 1 ? null : (
           <thead>
             <tr>
               <th>Name</th>
@@ -14,7 +14,7 @@ const Members = ({ members }) => {
           </thead>
         )}
         <tbody>
-          {members.map((element, i) => {
+          {(members || []).map((element, i) => {
             console.log(element);
             return (
               <tr key={i} className={element + i}>

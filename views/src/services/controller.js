@@ -17,4 +17,17 @@ export default {
       referrerPolicy: "no-referrer",
       body: JSON.stringify(data),
     }),
+  getMembers: (id) =>
+    fetch(url, {
+      method: "POST",
+      mode: "cors",
+      cache: "no-cache",
+      credentials: "same-origin",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      redirect: "follow",
+      referrerPolicy: "no-referrer",
+      body: JSON.stringify(id),
+    }),
 };

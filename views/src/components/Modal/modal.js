@@ -1,8 +1,8 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import Questionaire from "./questionaire";
 import { store } from "../../services/Store";
 
-const Modal = ({ close }) => {
+const Modal = ({ close, data }) => {
   const userData = useContext(store);
   const { dispatch } = userData;
   return (
@@ -14,6 +14,7 @@ const Modal = ({ close }) => {
         <Questionaire
           close={() => close()}
           element={userData.state.element}
+          data={data}
           info={(input) => {
             dispatch({ type: "setInfo", payload: input });
           }}

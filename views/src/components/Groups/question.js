@@ -1,13 +1,14 @@
 import React from "react";
 
-const Questions = (props) => {
-  console.log(props);
+const Questions = ({ questions }) => {
   return (
     <>
-      {props.questions.length < 1 ? null : (
+      {(questions || []).length < 1 ? null : (
         <div>
           <h2>Question</h2>
-          <p>{props.questions}</p>
+          {(questions || []).map((question, i) => {
+            return <p key={i}>{question}</p>;
+          })}
         </div>
       )}
     </>

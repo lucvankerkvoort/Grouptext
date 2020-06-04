@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import Modal from "../Modal/modal";
 import Members from "./members";
 import Questions from "./question";
@@ -19,13 +19,12 @@ const Group = ({ element, removeGroup, id }) => {
     dispatch({ type: "setCurrent", payload: element.group_name });
   };
 
-  console.log(userData);
   return (
     <div className="groupElement">
       {showElement ? <Modal close={() => setShowElement(false)} /> : null}
       <h1>{element.group_name}</h1>
-      {/* <Members members={} /> */}
-      {/* <Questions questions={userData.state.groups} /> */}
+      <Members members={element.members} />
+      <Questions questions={element.question} />
       <div className="buttons-group">
         <button onClick={() => setElement("Member")}>Add a Member</button>
         <button onClick={() => setElement("Question")}>Add a Question</button>

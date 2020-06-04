@@ -6,21 +6,21 @@ import { Register } from "./elements/registration";
 import { Login } from "./elements/login";
 
 const Questionaire = ({ close, info, element }) => {
-  const handleClick = (e) => {
-    console.log(info);
-    e.preventDefault();
-    if (Object.keys(this.state).length === 0) {
-      let form = document.getElementsByTagName("form");
-      if (form[0].children.length <= 3) {
-        let message = document.createElement("p");
-        message.textContent = "Please provide a Group Name";
-        form[0].append(message);
-      }
-    } else {
-      info();
-      close();
-    }
-  };
+  // const handleClick = (e) => {
+  //   console.log(info);
+  //   e.preventDefault();
+  //   if (Object.keys(this.state).length === 0) {
+  //     let form = document.getElementsByTagName("form");
+  //     if (form[0].children.length <= 3) {
+  //       let message = document.createElement("p");
+  //       message.textContent = "Please provide a Group Name";
+  //       form[0].append(message);
+  //     }
+  //   } else {
+  //     info();
+  //     close();
+  //   }
+  // };
   const questions = () => {
     switch (element) {
       case "Login":

@@ -25,6 +25,8 @@ const StateProvider = ({ children }) => {
         return Object.assign({}, state, { question: action.payload });
       case "addGroup":
         return Object.assign({}, state, { addedGroup: action.payload });
+      case "check":
+        return Object.assign({}, state, { check: action.payload });
       default:
         throw new Error();
     }
