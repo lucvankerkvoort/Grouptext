@@ -1,11 +1,14 @@
-const url = "https://grouptext-django.dreamstate-4-all.org/TextGroups/";
+const groups = "https://grouptext-django.dreamstate-4-all.org/TextGroups/";
+const members =
+  "https://grouptext-django.dreamstate-4-all.org/TextGroupMember/";
+
 export default {
   getGroups: () =>
-    fetch(url)
+    fetch(groups)
       .then((res) => res.json())
       .then((json) => json),
   setGroups: (data) =>
-    fetch(url, {
+    fetch(groups, {
       method: "POST",
       mode: "cors",
       cache: "no-cache",
@@ -17,8 +20,8 @@ export default {
       referrerPolicy: "no-referrer",
       body: JSON.stringify(data),
     }),
-  getMembers: (id) =>
-    fetch(url, {
+  setGroups: (data) =>
+    fetch(members, {
       method: "POST",
       mode: "cors",
       cache: "no-cache",
@@ -28,6 +31,6 @@ export default {
       },
       redirect: "follow",
       referrerPolicy: "no-referrer",
-      body: JSON.stringify(id),
+      body: JSON.stringify(data),
     }),
 };
