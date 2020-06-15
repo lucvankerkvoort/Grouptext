@@ -14,7 +14,7 @@ const StateProvider = ({ children }) => {
       case "setInfo":
         return Object.assign({}, state, { data: action.payload });
       case "setCurrent":
-        return Object.assign({}, state, { current: action.payload });
+        return Object.assign({}, state, { cur_group_id: action.payload });
       case "registration":
         return Object.assign({}, state, { registration: action.payload });
       case "login":

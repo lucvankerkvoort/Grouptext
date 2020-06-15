@@ -8,19 +8,23 @@ export const AddMembers = ({ close }) => {
   const { dispatch } = userData;
 
   const [member_name, setName] = useState("");
-  const [member_tel, setTel] = useState("");
+  const [member_phone, setTel] = useState("");
 
   const handleClick = (e) => {
     e.preventDefault();
-    const info = {
+    const data = {
       ...member_name,
-      ...member_tel,
+      ...member_phone,
     };
-    const currentGroup = userData.state.current;
+    const id = userData.state.cur_group_id;
+    console.log(userData);
 
-    // API.addMemberToGroup([currentGroup, info]);
+    API.addMemberToGroup(id, data).then((res) => {
+      dispatch({ type: "check", payload: !userData.state.check });
+      console.log(res);
+    });
 
-    dispatch({ type: "member", payload: info });
+    // dispatch({ type: "member", payload: data });
     close();
   };
   return (
@@ -32,7 +36,7 @@ export const AddMembers = ({ close }) => {
         onChange={(e) => setName({ [e.target.name]: e.target.value })}
       />
       <input
-        name="member_tel"
+        name="member_phone"
         type="tel"
         placeholder="Phone number"
         onChange={(e) => setTel({ [e.target.name]: e.target.value })}

@@ -18,7 +18,7 @@ const CreateGroup = () => {
     },
     [userData.state.check]
   );
-
+  console.log(userData.state);
   return (
     <div className="CreateGroup">
       {showElement ? <Modal close={() => setShowElement(false)} /> : null}
@@ -32,7 +32,7 @@ const CreateGroup = () => {
         Add a Group +
       </div>
       {(userData.state.groups || []).map((element, i) => {
-        return <Group key={i} id={i} element={element} />;
+        return <Group key={i} element={element} />;
       })}
     </div>
   );

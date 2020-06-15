@@ -4,8 +4,7 @@ import Members from "./members";
 import Questions from "./question";
 import { store } from "../../services/Store";
 
-const Group = ({ element, removeGroup, id }) => {
-  console.log(element);
+const Group = ({ element, removeGroup }) => {
   const [showElement, setShowElement] = useState(false);
 
   const userData = useContext(store);
@@ -17,7 +16,7 @@ const Group = ({ element, removeGroup, id }) => {
       type: "setElement",
       payload: input,
     });
-    dispatch({ type: "setCurrent", payload: element.group_name });
+    dispatch({ type: "setCurrent", payload: element.group_id });
   };
 
   return (
@@ -29,7 +28,9 @@ const Group = ({ element, removeGroup, id }) => {
       <div className="buttons-group">
         <button onClick={() => setElement("Member")}>Add a Member</button>
         <button onClick={() => setElement("Question")}>Add a Question</button>
-        <button onClick={() => removeGroup(id)}>Remove Group</button>
+        <button onClick={() => removeGroup(element.group_id)}>
+          Remove Group
+        </button>
         <button>Send</button>
       </div>
     </div>

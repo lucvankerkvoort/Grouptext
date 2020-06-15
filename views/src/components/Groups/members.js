@@ -1,7 +1,7 @@
 import React from "react";
+import API from "../../services/controller";
 
 const Members = ({ members }) => {
-  console.log(members);
   return (
     <div className="members">
       <table>
@@ -23,7 +23,7 @@ const Members = ({ members }) => {
                 <td>{element.member_phone}</td>
                 <td
                   style={{ cursor: "pointer" }}
-                  // onClick={() => props.remove(i)}
+                  // onClick={() => API. }
                 >
                   X
                 </td>

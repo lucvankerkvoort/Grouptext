@@ -8,8 +8,6 @@
   table {
     font-size: 0.55em;
     font-family: "Montserrat";
-    th {
-    }
     td {
       box-shadow: 1px 1px 3px gray;
       padding: 3px;
@@ -26,4 +24,7 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  .members {
+    overflow: hidden;
+  }
 }
