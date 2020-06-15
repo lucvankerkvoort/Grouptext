@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { store } from "../../services/Store";
 import API from "../../services/controller";
 
 const Members = ({ members }) => {
+  const userData = useContext(store);
   return (
     <div className="members">
       <table>
@@ -23,7 +25,7 @@ const Members = ({ members }) => {
                 <td>{element.member_phone}</td>
                 <td
                   style={{ cursor: "pointer" }}
-                  // onClick={() => API. }
+                  // onClick={() => API.removeMemberFromGroup(element.member_id, userData.state.cur_group_id) }
                 >
                   X
                 </td>
