@@ -1,6 +1,6 @@
 import React, { useState, Suspense } from "react";
 import Navbar from "./components/Navbar/navbar";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HashRouter, Route } from "react-router-dom";
 import Homepage from "./pages/HomePage";
 import "./styles/import.scss";
 const Modal = React.lazy(() => import("./components/Modal/modal"));
@@ -14,7 +14,7 @@ const App = (props) => {
   const { handleInfo } = props;
   return (
     <div className="App">
-      <Router>
+      <HashRouter basename="/">
         {showElement ? (
           <Suspense fallback={<h1 className="loading">....Loading</h1>}>
             <Modal close={() => setShowElement(false)} info={handleInfo} />
@@ -28,7 +28,7 @@ const App = (props) => {
           <Route path="/about" component={About} />
         </Suspense>
         <Route exact path="/" component={Homepage} />
-      </Router>
+      </HashRouter>
     </div>
   );
 };

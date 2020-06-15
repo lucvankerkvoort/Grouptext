@@ -1,0 +1,29 @@
+.members {
+  position: absolute;
+  right: 0px;
+  top: 30px;
+  height: 150px;
+  overflow: scroll;
+  width: 170px;
+  table {
+    font-size: 0.55em;
+    font-family: "Montserrat";
+    th {
+    }
+    td {
+      box-shadow: 1px 1px 3px gray;
+      padding: 3px;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

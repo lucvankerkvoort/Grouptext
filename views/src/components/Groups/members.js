@@ -1,8 +1,9 @@
 import React from "react";
 
 const Members = ({ members }) => {
+  console.log(members);
   return (
-    <>
+    <div className="members">
       <table>
         {(members || []).length < 1 ? null : (
           <thead>
@@ -18,8 +19,8 @@ const Members = ({ members }) => {
             console.log(element);
             return (
               <tr key={i} className={element + i}>
-                <td>{element.memberName}</td>
-                <td>{element.telephoneNumber}</td>
+                <td>{element.member_name}</td>
+                <td>{element.member_phone}</td>
                 <td
                   style={{ cursor: "pointer" }}
                   // onClick={() => props.remove(i)}
@@ -31,7 +32,7 @@ const Members = ({ members }) => {
           })}
         </tbody>
       </table>
-    </>
+    </div>
   );
 };
 

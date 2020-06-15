@@ -5,7 +5,7 @@
   width: 100%;
   font-family: "Montserrat";
   font-weight: 800;
-  color: $yellow;
+  color: black;
   background: white;
   .logo {
     display: none;
@@ -14,7 +14,7 @@
     align-items: center;
     p {
       font-size: 0.5em;
-      color: $yellow;
+      color: black;
     }
     p:hover {
       transform: scale(1.1);
@@ -32,7 +32,7 @@
     // text-shadow: 1px 1px 1px black;
     width: 80%;
     p {
-      color: $yellow;
+      color: black;
       font-size: 0.8em;
       padding: 0 2px;
       cursor: pointer;
@@ -65,7 +65,7 @@
       align-items: center;
       p {
         font-size: 1.2em;
-        color: $yellow;
+        color: black;
       }
     }
   }

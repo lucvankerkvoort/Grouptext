@@ -5,6 +5,7 @@ import Questions from "./question";
 import { store } from "../../services/Store";
 
 const Group = ({ element, removeGroup, id }) => {
+  console.log(element);
   const [showElement, setShowElement] = useState(false);
 
   const userData = useContext(store);

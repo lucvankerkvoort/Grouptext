@@ -15,7 +15,6 @@ const CreateGroup = () => {
       API.getGroups().then((data) =>
         dispatch({ type: "setGroups", payload: data })
       );
-      console.log("check", userData.state.groups);
     },
     [userData.state.check]
   );
