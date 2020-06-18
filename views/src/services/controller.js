@@ -22,7 +22,7 @@ export default {
       body: JSON.stringify(data),
     }),
   addMemberToGroup: (id, data) =>
-    fetch(members + id, {
+    fetch(members + id + "/", {
       method: "POST",
       mode: "cors",
       cache: "no-cache",
