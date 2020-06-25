@@ -4,6 +4,7 @@ import API from "../../services/controller";
 
 const Members = ({ members }) => {
   const userData = useContext(store);
+  const { dispatch } = userData;
   return (
     <div className="members">
       <table>
@@ -25,7 +26,14 @@ const Members = ({ members }) => {
                 <td>{element.member_phone}</td>
                 <td
                   style={{ cursor: "pointer" }}
-                  // onClick={() => API.removeMemberFromGroup(element.member_id, userData.state.cur_group_id) }
+                  onClick={() =>
+                    API.removeMemberFromGroup(element.member_id).then((res) =>
+                      dispatch({
+                        type: "check",
+                        payload: !userData.state.check,
+                      })
+                    )
+                  }
                 >
                   X
                 </td>

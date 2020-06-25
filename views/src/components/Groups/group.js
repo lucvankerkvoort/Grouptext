@@ -3,6 +3,7 @@ import Modal from "../Modal/modal";
 import Members from "./members";
 import Questions from "./question";
 import { store } from "../../services/Store";
+import API from "../../services/controller";
 
 const Group = ({ element, removeGroup }) => {
   const [showElement, setShowElement] = useState(false);
@@ -28,7 +29,13 @@ const Group = ({ element, removeGroup }) => {
       <div className="buttons-group">
         <button onClick={() => setElement("Member")}>Add a Member</button>
         <button onClick={() => setElement("Question")}>Add a Question</button>
-        <button onClick={() => removeGroup(element.group_id)}>
+        <button
+          onClick={() => {
+            API.removeGroup(element.group_id).then((res) =>
+              dispatch({ type: "check", payload: !userData.state.check })
+            );
+          }}
+        >
           Remove Group
         </button>
         <button>Send</button>

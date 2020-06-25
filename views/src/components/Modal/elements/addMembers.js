@@ -17,7 +17,7 @@ export const AddMembers = ({ close }) => {
       ...member_phone,
     };
     const id = userData.state.cur_group_id;
-    console.log(userData);
+    console.log(data);
 
     API.addMemberToGroup(id, data).then((res) => {
       dispatch({ type: "check", payload: !userData.state.check });
