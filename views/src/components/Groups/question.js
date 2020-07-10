@@ -7,9 +7,7 @@ const Questions = ({ questions }) => {
       {(questions || []).length < 1 ? null : (
         <div className="question">
           <h2>Question</h2>
-          {(questions || []).map((question) => {
-            return <p>{question.question}</p>;
-          })}
+          <p>{questions[questions.length - 1].question}</p>
         </div>
       )}
     </>
