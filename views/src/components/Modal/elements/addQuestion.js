@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useContext } from "react";
 import { store } from "../../../services/Store";
+import API from "../../../services/controller";
 
 export const AddQuestion = ({ close }) => {
   const userData = useContext(store);
@@ -10,10 +11,14 @@ export const AddQuestion = ({ close }) => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    const info = {
+    const data = {
       ...question,
     };
-    dispatch({ type: "question", payload: info });
+    const id = userData.state.cur_group_id;
+    API.updateQuestion(id, data).then((res) => {
+      dispatch({ type: "check", payload: !userData.state.check });
+      console.log(res);
+    });
     close();
   };
   return (

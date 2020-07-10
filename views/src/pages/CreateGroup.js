@@ -10,15 +10,22 @@ const CreateGroup = () => {
   const userData = useContext(store);
   const { dispatch } = userData;
 
+  // API.getQuestion()
+  //   .then((res) => res.json)
+  //   .then((data) => dispatch({ type: "setQuestions", payload: data }));
+
   useEffect(
     function () {
-      API.getGroups().then((data) =>
-        dispatch({ type: "setGroups", payload: data })
-      );
+      API.getGroups()
+        .then((res) => res.json())
+        .then((data) => {
+          dispatch({ type: "setGroups", payload: data });
+          console.log(data);
+        });
     },
     [userData.state.check]
   );
-  console.log(userData.state);
+
   return (
     <div className="CreateGroup">
       {showElement ? <Modal close={() => setShowElement(false)} /> : null}

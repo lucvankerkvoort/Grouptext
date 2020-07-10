@@ -1,12 +1,15 @@
 import React from "react";
 
-const Questions = ({ question }) => {
+const Questions = ({ questions }) => {
+  console.log(questions);
   return (
     <>
-      {(question || []).length < 1 ? null : (
+      {(questions || []).length < 1 ? null : (
         <div className="question">
           <h2>Question</h2>
-          <p>{question || "First initial Question"}</p>
+          {(questions || []).map((question) => {
+            return <p>{question.question}</p>;
+          })}
         </div>
       )}
     </>

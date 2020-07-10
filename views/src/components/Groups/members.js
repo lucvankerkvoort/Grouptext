@@ -19,7 +19,6 @@ const Members = ({ members }) => {
         )}
         <tbody>
           {(members || []).map((element, i) => {
-            console.log(element);
             return (
               <tr key={i} className={element + i}>
                 <td>{element.member_name}</td>
@@ -27,11 +26,14 @@ const Members = ({ members }) => {
                 <td
                   style={{ cursor: "pointer" }}
                   onClick={() =>
-                    API.removeMemberFromGroup(element.member_id).then((res) =>
-                      dispatch({
-                        type: "check",
-                        payload: !userData.state.check,
-                      })
+                    API.removeMemberFromGroup(element.member_id).then(
+                      (data) => {
+                        console.log(data);
+                        dispatch({
+                          type: "check",
+                          payload: !userData.state.check,
+                        });
+                      }
                     )
                   }
                 >

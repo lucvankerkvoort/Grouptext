@@ -9,6 +9,8 @@ const StateProvider = ({ children }) => {
     switch (action.type) {
       case "setGroups":
         return Object.assign({}, state, { groups: action.payload });
+      case "setQuestions":
+        return Object.assign({}, state, { questions: action.payload });
       case "setElement":
         return Object.assign({}, state, { element: action.payload });
       case "setInfo":

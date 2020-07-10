@@ -5,7 +5,7 @@ import Questions from "./question";
 import { store } from "../../services/Store";
 import API from "../../services/controller";
 
-const Group = ({ element, removeGroup }) => {
+const Group = ({ element }) => {
   const [showElement, setShowElement] = useState(false);
 
   const userData = useContext(store);
@@ -25,15 +25,17 @@ const Group = ({ element, removeGroup }) => {
       {showElement ? <Modal close={() => setShowElement(false)} /> : null}
       <h1>{element.group_name}</h1>
       <Members members={element.members} />
-      <Questions questions={element.question} />
+      {console.log(element.questions)}
+      <Questions questions={element.questions} />
       <div className="buttons-group">
         <button onClick={() => setElement("Member")}>Add a Member</button>
         <button onClick={() => setElement("Question")}>Add a Question</button>
         <button
           onClick={() => {
-            API.removeGroup(element.group_id).then((res) =>
-              dispatch({ type: "check", payload: !userData.state.check })
-            );
+            API.removeGroup(element.group_id).then((res) => {
+              dispatch({ type: "check", payload: !userData.state.check });
+              console.log(res);
+            });
           }}
         >
           Remove Group
