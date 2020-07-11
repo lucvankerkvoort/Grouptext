@@ -20,11 +20,11 @@
     justify-content: space-evenly;
     background-image: linear-gradient(
       to bottom,
-      #17e9e0,
-      #00e3e8,
-      #00dcef,
-      #00d5f4,
-      #00cef7
+      #283d89,
+      #234e97,
+      #225ea3,
+      #266fae,
+      #307fb8
     );
     align-items: center;
     height: 100%;
@@ -64,6 +64,7 @@
     overflow-x: hidden;
     top: 50px;
   }
+
   h1 {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -74,11 +75,11 @@
     text-shadow: 1px 1px gray;
     background-image: linear-gradient(
       to right,
-      #17e9e0,
-      #00e3e8,
-      #00dcef,
-      #00d5f4,
-      #00cef7
+      #283d89,
+      #006eb7,
+      #009ed6,
+      #00cde8,
+      #5ffbf1
     );
     color: white;
     align-items: center;
