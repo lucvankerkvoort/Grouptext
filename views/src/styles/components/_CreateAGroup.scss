@@ -8,7 +8,15 @@
     position: absolute;
     left: 5px;
     color: white;
-    background: $highlight;
+    background-image: linear-gradient(
+      to right,
+      #577cce,
+      #425fb6,
+      #2f439e,
+      #1d2785,
+      #09086b
+    );
+    // background: $highlight;
     margin-left: 20px;
     text-shadow: 1px 1px gray;
     cursor: pointer;

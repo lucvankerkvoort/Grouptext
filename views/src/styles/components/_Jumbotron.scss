@@ -2,21 +2,23 @@
   display: flex;
   height: 80vh;
   width: 100%;
+
   background-image: linear-gradient(
-    to left bottom,
-    #fccd04,
-    #cedb35,
-    #a1e460,
-    #74e98b,
-    #45ebb4,
-    #20e9c8,
-    #00e7da,
-    #00e3e8,
-    #00deed,
-    #00d9f2,
-    #00d4f5,
-    #00cef7
+    to right top,
+    #577cce,
+    #4766bc,
+    #3851aa,
+    #2a3c98,
+    #1d2785,
+    #2b2182,
+    #361b7e,
+    #3f127a,
+    #5b1b85,
+    #75268f,
+    #8e3198,
+    #a73ea2
   );
+
   background-size: cover;
   background-position: center;
   justify-content: flex-start;
@@ -47,3 +49,20 @@
     }
   }
 }
+
+// background-image: linear-gradient(
+//     to left bottom,
+//     #fccd04,
+//     #cedb35,
+//     #a1e460,
+//     #74e98b,
+//     #45ebb4,
+//     #20e9c8,
+//     #00e7da,
+//     #00e3e8,
+//     #00deed,
+//     #00d9f2,
+//     #00d4f5,
+//     #00cef7
+//   );
+// background-image: linear-gradient(to right top, #577cce, #4766bc, #3851aa, #2a3c98, #1d2785, #2b2182, #361b7e, #3f127a, #5b1b85, #75268f, #8e3198, #a73ea2);
