@@ -20,11 +20,11 @@
     justify-content: space-evenly;
     background-image: linear-gradient(
       to bottom,
-      #283d89,
-      #234e97,
-      #225ea3,
-      #266fae,
-      #307fb8
+      #577cce,
+      #425fb6,
+      #2f439e,
+      #1d2785,
+      #09086b
     );
     align-items: center;
     height: 100%;
@@ -72,16 +72,17 @@
     font-size: 1em;
     height: 50px;
     width: 100%;
-    text-shadow: 1px 1px gray;
     background-image: linear-gradient(
       to right,
-      #283d89,
-      #006eb7,
-      #009ed6,
-      #00cde8,
-      #5ffbf1
+      #577cce,
+      #425fb6,
+      #2f439e,
+      #1d2785,
+      #09086b
     );
     color: white;
+    text-shadow: 1px 1px gray;
+    font-weight: bold;
     align-items: center;
     margin: 0px;
     justify-content: center;
