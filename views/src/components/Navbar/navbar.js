@@ -3,6 +3,7 @@ import { navbarItems } from "./navbar-items";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { store } from "../../services/Store";
+import Images from "../../images/Images";
 
 const Navbar = ({ showElement }) => {
   const userData = useContext(store);
@@ -16,7 +17,13 @@ const Navbar = ({ showElement }) => {
     <div className="navbar">
       <div className="logo">
         <Link to="/" style={{ textDecoration: "none", color: "black" }}>
-          <p>Group Text</p>
+          <div
+            id="logo"
+            style={{
+              background: `url(${Images.Logo_no_text})`,
+              backgroundSize: "cover",
+            }}
+          />
         </Link>
       </div>
       <div className="navbar-items">
