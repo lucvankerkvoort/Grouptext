@@ -1,0 +1,30 @@
+.chatbox {
+  width: 75%;
+  height: 100%; //   border: 2px solid black;
+  //   margin: 5%;
+  .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    border: 2px solid black;
+  }
+  .chatscreen {
+    height: 75%;
+    background: white;
+    border: 2px solid black;
+  }
+  .composer {
+    height: 10%;
+    // border: 2px solid black;
+    display: flex;
+    // width: 100%;
+    // textarea {
+    //   width: 90%;
+    //   height: 80%;
+    // }
+    // button {
+    //   width: 10%;
+    // }
+  }
+}

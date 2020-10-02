@@ -1,8 +1,8 @@
 export const navbarItems = [
   { name: "Home", link: "/" },
   {
-    name: "Create Group",
-    link: "/creategroup",
+    name: "Chat",
+    link: "/chat",
   },
   {
     name: "Login",

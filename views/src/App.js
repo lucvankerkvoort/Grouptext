@@ -6,7 +6,7 @@ import "./styles/import.scss";
 const Modal = React.lazy(() => import("./components/Modal/modal"));
 const Help = React.lazy(() => import("./pages/Help"));
 const About = React.lazy(() => import("./pages/About"));
-const CreateGroup = React.lazy(() => import("./pages/CreateGroup"));
+const Chat = React.lazy(() => import("./pages/Chat"));
 
 const App = (props) => {
   const [showElement, setShowElement] = useState(false);
@@ -23,7 +23,7 @@ const App = (props) => {
         <Navbar showElement={() => setShowElement(true)} />
 
         <Suspense fallback={<h1 className="loading">....Loading</h1>}>
-          <Route path="/creategroup" render={() => <CreateGroup />} />
+          <Route path="/chat" render={(props) => <Chat {...props} />} />
           <Route path="/help" component={Help} />
           <Route path="/about" component={About} />
         </Suspense>

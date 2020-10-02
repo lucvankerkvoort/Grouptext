@@ -5,6 +5,7 @@ import { store } from "../../services/Store";
 const Modal = ({ close, data }) => {
   const userData = useContext(store);
   const { dispatch } = userData;
+  const { element } = userData.state;
   return (
     <div className="wrapper">
       <h2 className="close" onClick={() => close()}>
@@ -13,7 +14,7 @@ const Modal = ({ close, data }) => {
       <div className="screen">
         <Questionaire
           close={() => close()}
-          element={userData.state.element}
+          element={element}
           data={data}
           info={(input) => {
             dispatch({ type: "setInfo", payload: input });

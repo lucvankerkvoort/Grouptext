@@ -1,0 +1,33 @@
+.chat {
+  display: flex;
+  margin: 5%;
+  height: 500px;
+  // border: 2px solid black;
+  background: gray;
+  .contactbox {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 25%;
+    // border: 2px solid black;
+    header {
+      height: 10%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border: 2px solid black;
+    }
+    .contacts {
+      height: 80%;
+      background: white;
+      border: 2px solid black;
+    }
+    .footer {
+      height: 10%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border: 2px solid black;
+    }
+  }
+}
